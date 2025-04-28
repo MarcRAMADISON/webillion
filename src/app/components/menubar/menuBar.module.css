@@ -1,0 +1,27 @@
+.menuContainer{
+    width:100vw;
+    height: 60px;
+    position:fixed;
+    top:50px;
+    left:0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuItems{
+    width:70%;
+    height:60px;
+    background: #8C52FF;
+    background: linear-gradient(90deg,rgba(140, 82, 255, 1) 0%, rgba(92, 225, 230, 1) 100%);
+    border-radius: 50px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ .item{
+    color:#fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+ }
