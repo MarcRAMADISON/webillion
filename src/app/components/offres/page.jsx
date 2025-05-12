@@ -30,12 +30,19 @@ function Offres() {
                         <h2 className={styles.offre}>{offre.offre}</h2>
                     </div>
                     <div className={styles.bodyCard}>
+                        <h3 className={styles.price}>{offre.price}€</h3>
                         {
                             offre.descriptions.map((description)=>{
                                 return <h3 className={styles.description}>{description}</h3>
                             })
                         }
+                        <h3 className={styles.info}>💡 Idéal pour professionnaliser votre image, attirer vos clients cibles et automatiser les premières prises de contact.</h3>
+                        <div className={styles.button}>
+                        Réserver votre formule
+                        </div>
                     </div>
+                    <div className={styles.onglet1}></div>
+
                 </div>
             })
         }

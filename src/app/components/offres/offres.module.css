@@ -5,7 +5,8 @@
    place-self: center;
    width:90vw;
    height: fit-content;
-   margin-top:150px
+   margin:150px 0px;
+   padding: 0;
 }
 .title{
     color:#00214d;
@@ -24,9 +25,11 @@
     grid-template-columns: repeat(3,1fr);
     width:100%;
     background-color: #f8f5f1;
-    height:600px;
+    height:auto;
     margin-top: 100px;
+    position:relative;
 }
+
 .header::before {
     content: "";
     position: absolute;
@@ -42,8 +45,8 @@
     flex-direction: column;
     align-items: center;
     width:90%;
-    max-width: 400px;
-    margin: 30px auto auto auto;
+    max-width: 450px;
+    margin: 100px auto auto auto;
     padding: 20px;
     place-self:center;
     position: relative;
@@ -55,20 +58,21 @@
     display: flex;
     flex-direction: column;
     width:90%;
-    max-width: 400px;
+    max-width: 450px;
     height:auto;
+    min-height: 570px;
     background-color: #fff;
-    margin:auto;
+    margin:auto auto 50px auto;
     place-self: center;
     border-radius: 0px 0px 20px 20px;
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
 
 }
 
 .label{
     color:#5e17eb;
     font-size: 1.1rem;
-    font-weight: 400;
+    font-weight: 450;
     text-transform: uppercase;
 }
 
@@ -81,6 +85,29 @@
 }
 
 .description{
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.price{
+    color:#00214d;
+    font-size: 2rem;
+    place-self: center;
+    margin:auto
+}
+.info{
+    color:#00214d;
+    font-size: 0.8rem;
+    margin:30px 0px;
+    font-weight: 600;
+    text-align: center;
+}
+.button{
+    padding: 10px 15px;
+    place-self: center;
+    color:#000;
+    font-weight: 600;
+    background-color: #ebe2d6;
+    border-radius: 5px;
 }
