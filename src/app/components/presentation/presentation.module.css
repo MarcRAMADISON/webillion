@@ -1,0 +1,72 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width:100vw;
+    margin-top: 50px;
+}
+
+.imageContainer{
+    width:75%;
+    height:75%;
+    position: relative;
+    margin: auto;
+    place-self: center;
+    max-width: 700px;
+}
+
+.title{
+    color:#38b6ff;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: left;
+    width:80%;
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    padding: 70px;
+}
+
+.subTitle{
+    color:#00214d;
+    font-weight: 300;
+    font-size: 1.2rem;
+    width:80%;
+    min-width: 500px;
+    margin: 40px 0px 20px 0px;
+    line-height: 35px;
+}
+
+.iconContainer{
+    position: relative;
+    width:80px;
+    height:80px;
+    margin: auto;
+    place-self: center;
+}
+
+.containerSlogan{
+    display: flex;
+    width:80%;
+    min-width: 500px;
+    justify-content: space-between;
+    min-width: 500px;
+    margin-top: 40px;
+}
+.slogan{
+    color:#38b6ff;
+    margin-top: 10px;
+}
+
+@media (max-width:1380px){
+    .title {
+      font-size: 2.5rem;
+    }
+    .subTitle {
+      font-size: 1rem;
+      
+    }
+  }

@@ -1,0 +1,86 @@
+.container{
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   place-self: center;
+   width:90vw;
+   height: fit-content;
+   margin-top:150px
+}
+.title{
+    color:#00214d;
+    font-size: 2.5rem;
+
+}
+.subTitle{
+    color:#00214d;
+    font-size: 1.1rem;
+    margin-top: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width:100%;
+    background-color: #f8f5f1;
+    height:600px;
+    margin-top: 100px;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(140, 82, 255, 1) 0%, rgba(92, 225, 230, 1) 100%);
+    opacity: 0.7;
+    z-index: -1;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
+    max-width: 400px;
+    margin: 30px auto auto auto;
+    padding: 20px;
+    place-self:center;
+    position: relative;
+    z-index: 1;
+    height:140px;
+    
+}
+.bodyCard{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    max-width: 400px;
+    height:auto;
+    background-color: #fff;
+    margin:auto;
+    place-self: center;
+    border-radius: 0px 0px 20px 20px;
+    padding: 30px;
+
+}
+
+.label{
+    color:#5e17eb;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.offre{
+    color:#fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.description{
+    font-size: 0.9rem;
+    font-weight: 400;
+}

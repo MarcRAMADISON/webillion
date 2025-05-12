@@ -2,7 +2,7 @@
   background-image: url('/assets/welcome_bg.jpg');
   width: 100vw;
   min-height: 900px;
-  height: 100vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: flex-end;
@@ -66,5 +66,17 @@
     scale:1
   } 100%{
     scale:0.8
+  }
+}
+
+@media (max-width:1380px){
+  .title {
+    font-size: 3rem;
+  }
+  .subTitle {
+    font-size: 1.1rem;
+  }
+  .container {
+    min-height: 750px;
   }
 }
