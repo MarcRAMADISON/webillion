@@ -1,14 +1,24 @@
+'use client';
+
 import styles from "./services.module.css";
 import Image from "next/image";
 import { services } from "@/app/utils";
+import { useRouter } from "next/navigation";
 
 function Services() {
+  const router=useRouter()
+
+  const handleRedirect=(type)=>{
+    if(type === 'CM'){
+      router.push('/offreCM')
+    }
+  }
   return (
     <div className={styles.container}>
       <div className={styles.services}>
         {services.map((service,index) => {
           return (
-            <div key={index} className={styles.service}>
+            <div key={index} className={styles.service} onClick={()=>handleRedirect(service.type)}>
               <div style={{ display: "flex",alignItems:'center', width: "100%" }}>
                 <div className={styles.dote}></div>
                 <h3 className={styles.title}>{service.title}</h3>

@@ -1,0 +1,91 @@
+.container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width:100vw;
+    height:100%;
+    padding: 100px 0px;
+}
+.contactForm{
+    width:90%;
+    max-width:700px;
+    height:520px;
+    background-color: rgba(139,115,255,0.5);
+    margin: auto;
+    place-self: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+.contact{
+    width:80%;
+    height: 100%;
+}
+.title{
+    color:#781487;
+    font-size:2rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.subtitle{
+    font-size: 1rem;
+    font-weight: 400;
+    color:#00214d
+}
+.contactTitle{
+    color:#781487;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.contactSubTitle{
+    color:#781487;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.inputField{
+    background-color: #fff;
+    height:30px;
+    width:100%;
+    border:none;
+    border-radius:5px
+}
+.label{
+    color:#fff;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.block1{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:17px
+}
+.block2{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    margin-top: 20px;
+}
+.inputAreaField{
+    background-color: #fff;
+    height:100px;
+    width:100%;
+    border:none;
+    border-radius:5px;
+}
+.titleContact{
+    color:#781487;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+.bouton{
+    color:#fff;
+    background-color: #8278c4;
+    padding: 5px 20px;
+    width:fit-content;
+    height: fit-content;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 15px;
+}
