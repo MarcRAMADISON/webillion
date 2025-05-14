@@ -54,3 +54,27 @@ export const offres=[
         ]
     }
 ]
+
+export const offresCM=[
+    {
+        title:'Offre Confirmée',
+        offres:[
+            'Création et gestion des avis Google',
+            'Élaboration d’une ligne éditoriale adaptée',
+            'Veille concurrentielle pour optimiser votre stratégie',
+            'Création et publication de contenu (photos, vidéos, reels)',
+            'Animation et engagement actif avec votre audience',
+            'Feedback sur les résultats obtenus chaque fin du mois'
+        ]
+    },{
+        title:'Offre ÉLITE : 500€ (Une solution complète pour une visibilité maximale sur 4 réseaux sociaux !)',
+        offres:[
+            '200 avis Google générés pour renforcer votre réputation en ligne',
+            'Stratégie éditoriale avancée et contenus engageants',
+            'Veille et benchmark concurrentiel approfondis',
+            'Création et publication de contenu (photos, vidéos, reels) adaptés à chaque plateforme',
+            'Animation et engagement actif avec votre audience',
+            'Feedback plus détaillé sur les résultats obtenus chaque fin du mois'
+        ]
+    }
+]
