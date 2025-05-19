@@ -1,0 +1,48 @@
+.container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width:100vw;
+    height:fit-content;
+    min-height:920px;
+    margin:100px 0px;
+}
+.imageContainer{
+    position:relative;
+    width:100%;
+    height:100%;
+    max-width: 650px;
+    place-self: center;
+}
+.textContrainer{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+
+    margin: auto;
+    place-self: center;
+}
+.title{
+    color:#38b6ff;
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+.subTitle{
+    color:#5e17eb;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+.description{
+    color:#00214d;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.dote{
+    width:5px;
+    height:5px;
+    background-color: #5e17eb;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
