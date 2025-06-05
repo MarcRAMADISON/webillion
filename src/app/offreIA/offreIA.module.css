@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width:100vw;
+    min-height: 100vh;
+}
+.imageContainer{
+    width:100%;
+    height:80%;
+    position: relative;
+    place-self: end;
+}
+.block1{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin-top: 25vh;
+}
+.title{
+    color:#00214d;
+    font-size: 1.2rem;
+}
+.subTitle{
+    color:#000;
+    font-size: 1rem;
+}

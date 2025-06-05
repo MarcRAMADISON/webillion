@@ -14,7 +14,7 @@ export default function Welcome() {
           </div>
           <h2 className={styles.subTitle} style={{marginTop:'10px'}}>Votre partenaire de confiance pour une visibilité digitale efficace et percutante</h2>
         </div>
-        <div style={{ width: "auto", height: "80vh", position: "relative",zIndex:'99' }}>
+        <div className={styles.imageContainer}>
           <Image
             src="/assets/person1.png"
             alt="person"

@@ -111,3 +111,23 @@
     background-color: #ebe2d6;
     border-radius: 5px;
 }
+
+@media (max-width:920px){
+    .container{
+        margin:0px 0px;
+     }
+     .title{
+        font-size: 1.9rem;
+    }
+    .subTitle{
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+    .cardContainer{
+        grid-template-columns: 100%;
+    }
+    .header{
+        margin: 50px auto auto auto;
+
+    }
+}

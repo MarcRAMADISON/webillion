@@ -17,6 +17,8 @@ function Services() {
       router.push('/offreDW')
     } else if(type === "ADS"){
       router.push('/offreADS')
+    } else{
+      router.push('/offreIA')
     }
   }
   return (

@@ -95,8 +95,8 @@ function Contact() {
         >
           <Image
             src="/assets/mail.png"
-            width={55}
-            height={55}
+            width={40}
+            height={40}
             alt="call icon"
             style={{ marginRight: "20px" }}
           />
@@ -117,8 +117,8 @@ function Contact() {
         >
           <Image
             src="/assets/call.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="call icon"
             style={{ marginRight: "20px" }}
           />
@@ -130,29 +130,29 @@ function Contact() {
         <div style={{ display: "flex", marginTop: "60px" }}>
           <Image
             src="/assets/facebook.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="call icon"
             style={{ marginRight: "40px" }}
           />
           <Image
             src="/assets/instagram.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="call icon"
             style={{ marginRight: "40px" }}
           />
           <Image
             src="/assets/linkedin.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="call icon"
             style={{ marginRight: "40px" }}
           />
           <Image
             src="/assets/tiktok.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="call icon"
             style={{ marginRight: "40px" }}
           />

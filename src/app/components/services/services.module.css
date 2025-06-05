@@ -62,3 +62,15 @@
     margin-top: 15px;
     font-weight: 600;
 }
+
+@media  (max-width:920px){
+    .container{
+        grid-template-columns: 100%;
+        height: fit-content;
+    }
+    .imageContainer{
+        width:300px;
+        height:300px;
+        margin: 50px 0px;
+    }
+}

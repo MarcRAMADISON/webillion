@@ -22,8 +22,8 @@ function Offres() {
                 return <div key={index}>
                     <div className={styles.header}>
                         <div style={{display:"flex",marginBottom:'10px'}}>
-                        {[...new Array(nbStar)].map(()=>{
-                            return <Image alt="star" src="/assets/star.png" width={20} height={20}/>
+                        {[...new Array(nbStar)].map((n,index)=>{
+                            return <Image key={index} alt="star" src="/assets/star.png" width={20} height={20}/>
                         })}
                         </div>
                         <h3 className={styles.label}>Offre</h3>
@@ -32,8 +32,8 @@ function Offres() {
                     <div className={styles.bodyCard}>
                         <h3 className={styles.price}>{offre.price}€</h3>
                         {
-                            offre.descriptions.map((description)=>{
-                                return <h3 className={styles.description}>{description}</h3>
+                            offre.descriptions.map((description,index)=>{
+                                return <h3 key={index} className={styles.description}>{description}</h3>
                             })
                         }
                         <h3 className={styles.info}>💡 Idéal pour professionnaliser votre image, attirer vos clients cibles et automatiser les premières prises de contact.</h3>
