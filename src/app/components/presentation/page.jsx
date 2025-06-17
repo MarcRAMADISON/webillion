@@ -1,12 +1,13 @@
 import Image from 'next/image';
-import styles from './presentation.module.css'
+import styles from './presentation.module.css';
+import Animation from '../animation/page';
 
 function Presentation() {
-    return ( <div className={styles.container}>
-        <div className={styles.imageContainer}>
+    return ( <div className={styles.container} id="about">
+        <Animation className={styles.imageContainer} animation="fadeInRight">
             <Image src='/assets/team_illustration.png' alt='team illustration' layout='fill' objectFit='contain' objectPosition='90% 0%'/>
-        </div>
-        <div className={styles.textContainer}>
+        </Animation>
+        <Animation className={styles.textContainer} animation='fadeInLeft'>
             <h1 className={styles.title}> Qui sommes nous?</h1>
             <h2 className={styles.subTitle}>
             Nous sommes une agence de communication et marketing digital dédiée à la croissance de votre marque en ligne. Avec expertise et créativité, nous vous accompagnons dans le Community Management, Google Ads, Développement Web et Intelligence Artificielle pour maximiser votre impact digital. Notre mission : bâtir une présence forte, authentique et performante en alliant stratégie, innovation et engagement. Faites confiance à notre savoir-faire pour transformer votre visibilité en succès.
@@ -31,7 +32,7 @@ function Presentation() {
                     <h3 className={styles.slogan}>Performance</h3>
                 </div>
             </div>
-        </div>
+        </Animation>
     </div> );
 }
 

@@ -4,6 +4,7 @@ import styles from "./services.module.css";
 import Image from "next/image";
 import { services } from "@/app/utils";
 import { useRouter } from "next/navigation";
+import Animation from "../animation/page";
 
 function Services() {
   const router=useRouter()
@@ -22,8 +23,8 @@ function Services() {
     }
   }
   return (
-    <div className={styles.container}>
-      <div className={styles.services}>
+    <div className={styles.container} id='services'>
+      <Animation className={styles.services} animation="fadeInDown">
         {services.map((service,index) => {
           return (
             <div key={index} className={styles.service} onClick={(e)=>handleRedirect(e,service.type)}>
@@ -35,16 +36,16 @@ function Services() {
             </div>
           );
         })}
-      </div>
-      <div className={styles.imageContainer}>
+      </Animation>
+      <Animation className={styles.imageContainer} animation="fadeInUp">
         <Image
           src="/assets/services_illustration.png"
           alt="services illustration"
           layout="fill"
           objectFit="contain"
-          objectPosition="50% 50%"
+          objectPosition="50% 40%"
         />
-      </div>
+      </Animation>
     </div>
   );
 }

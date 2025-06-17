@@ -85,8 +85,6 @@
   .container {
     min-height: 750px;
     height:fit-content;
-    grid-template-columns: 100%;
-    padding:150px 0px 50px 0px
   }
 }
 @media (max-width:920px){

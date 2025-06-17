@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from "./contact.module.css";
+import Animation from "../animation/page";
 
 function Contact() {
   return (
-    <div className={styles.container}>
-      <div className={styles.contactForm}>
+    <div className={styles.container} id="contact">
+      <Animation animation="fadeInRight" className={styles.contactForm}>
         <h3 className={styles.titleContact}>Demander un devis</h3>
         <div className={styles.block1}>
           <div className={styles.inputLine}>
@@ -64,7 +65,7 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className={styles.block1} style={{ marginTop: "17px" }}>
+        <div className={styles.block1Message} style={{ marginTop: "17px" }}>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <h3 className={styles.label}>Nom :</h3>
@@ -74,8 +75,8 @@ function Contact() {
           <div className={styles.bouton}>Envoyer</div>
         </div>
 
-      </div>
-      <div className={styles.contact}>
+      </Animation>
+      <Animation animation="fadeInLeft" className={styles.contact}>
         <h2 className={styles.title}>Nous contacter</h2>
         <h3 className={styles.subtitle}>
           Vous avez un projet en tête ? Besoin d’un accompagnement sur-mesure ou
@@ -157,7 +158,7 @@ function Contact() {
             style={{ marginRight: "40px" }}
           />
         </div>
-      </div>
+      </Animation>
     </div>
   );
 }

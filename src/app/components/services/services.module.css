@@ -50,6 +50,7 @@
     position: relative;
     z-index: 1;
     cursor: pointer;
+    transition: all 0.8s ease-in;
 }
 .title{
     color:#00214d;
@@ -62,6 +63,9 @@
     margin-top: 15px;
     font-weight: 600;
 }
+.service:hover{
+    transform: scale(1.1);
+}
 
 @media  (max-width:920px){
     .container{
@@ -72,5 +76,11 @@
         width:300px;
         height:300px;
         margin: 50px 0px;
+    }
+    .dote{
+        margin-right: 15px;
+    }
+    .title{
+        font-size: 1.3rem;
     }
 }

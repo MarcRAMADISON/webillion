@@ -1,10 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Animation from "../animation/page";
 
 export default function Welcome() {
   return (
     <div className={styles.container}>
-        <div className={styles.block1}>
+        <Animation className={styles.block1} animation="fadeInRight">
           <h1 className={styles.title}>L’innovation digitale au service de votre succès.</h1>
           <h2 className={styles.subTitle}>Dominez le web avec des campagnes ciblées, un site web optimisé et une stratégie digitale pensée pour votre succès.</h2>
           <div className={styles.sloganContainer}>
@@ -13,8 +14,8 @@ export default function Welcome() {
             <h3 className={styles.slogan}> Innovation , engagement ,  Performance</h3>
           </div>
           <h2 className={styles.subTitle} style={{marginTop:'10px'}}>Votre partenaire de confiance pour une visibilité digitale efficace et percutante</h2>
-        </div>
-        <div className={styles.imageContainer}>
+        </Animation>
+        <Animation className={styles.imageContainer} animation="fadeInUp">
           <Image
             src="/assets/person1.png"
             alt="person"
@@ -22,7 +23,7 @@ export default function Welcome() {
             objectFit="contain"
             objectPosition="100% 100%"
           />
-        </div>
+        </Animation>
       
     </div>
   );

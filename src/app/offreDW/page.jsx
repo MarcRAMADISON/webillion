@@ -1,3 +1,4 @@
+import Animation from "../components/animation/page";
 import MenuBar from "../components/menubar/page";
 import styles from "./offreDW.module.css";
 import Image from "next/image";
@@ -5,9 +6,9 @@ import Image from "next/image";
 function OffreDW() {
   return (
     <>
-    <MenuBar/>
+    <MenuBar redirect={true}/>
     <div className={styles.container}>
-      <div className={styles.textContrainer}>
+      <Animation animation="fadeInRight" className={styles.textContrainer}>
         <h1 className={styles.title}>
           Développement Web & Mobile : Des solutions sur mesure pour votre
           activité
@@ -70,8 +71,8 @@ function OffreDW() {
             et efficace !
           </h3>
         </div>
-      </div>
-      <div className={styles.imageContainer}>
+      </Animation>
+      <Animation animation="fadeInLeft" className={styles.imageContainer}>
         <Image
           src="/assets/services_illustration.png"
           alt="services illustration"
@@ -79,7 +80,7 @@ function OffreDW() {
           objectFit="contain"
           objectPosition="0% 50%"
         />
-      </div>
+      </Animation>
     </div>
     </>
    

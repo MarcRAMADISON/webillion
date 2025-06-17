@@ -2,11 +2,12 @@ import { offresCM } from "@/app/utils";
 import styles from "./offreCM.module.css";
 import Image from "next/image";
 import MenuBar from "../components/menubar/page";
+import Animation from "../components/animation/page";
 
 function OffreCM() {
   return (
     <>
-      <MenuBar />
+      <MenuBar redirect={true}/>
       <div className={styles.container}>
         <div className={styles.block1}>
           <h1 className={styles.title}>
@@ -16,15 +17,15 @@ function OffreCM() {
             Pour un tarif spécial de 250€ au lieu de 300€, bénéficiez d’une
             gestion complète de 2 réseaux sociaux au choix avec :
           </h2>
-          <div className={styles.offres}>
+          <Animation animation="fadeInTop" className={styles.offres}>
             <div className={styles.offre}>
-              {offresCM.map((offre) => {
+              {offresCM.map((offre,index) => {
                 return (
-                  <div className={styles.offreContainer}>
+                  <div key={index} className={styles.offreContainer}>
                     <h2 className={styles.offreTitle}>{offre.title}</h2>
-                    {offre.offres.map((o) => {
+                    {offre.offres.map((o,index) => {
                       return (
-                        <div style={{ display: "flex", alignItems: "center" }}>
+                        <div key={index} style={{ display: "flex", alignItems: "center" }}>
                           <div className={styles.dote}></div>
                           <span className={styles.offreDesc}>{o}</span>
                         </div>
@@ -34,9 +35,9 @@ function OffreCM() {
                 );
               })}
             </div>
-          </div>
+          </Animation>
         </div>
-        <div className={styles.imageContainer}>
+        <Animation animation="fadeInLeft" className={styles.imageContainer}>
           <Image
             src="/assets/illustrationCM.png"
             alt="illustration CM"
@@ -44,7 +45,7 @@ function OffreCM() {
             objectFit="contain"
             objectPosition="right top"
           />
-        </div>
+        </Animation>
       </div>
     </>
   );

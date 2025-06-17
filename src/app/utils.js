@@ -92,3 +92,12 @@ export const offresCM = [
     ],
   },
 ];
+
+export const handleRedirect=(id)=>{
+  const element=document.getElementById(id)
+
+  if(element){
+    element.scrollIntoView({behavior:"smooth"})
+  }
+  
+}

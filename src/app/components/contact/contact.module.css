@@ -89,6 +89,12 @@
     border-radius: 5px;
     margin-left: 15px;
 }
+.block1Message{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:17px
+}
 
 @media (max-width:920px){
     .container{
@@ -97,6 +103,7 @@
     .contact{
         width:90%;
         place-self: center;
+        margin: 50px 0px 30px 0px;
     }
     .contactForm{
         height:fit-content;
@@ -116,5 +123,8 @@
     }
     .titleContact{
         font-size:1.7rem;
+    }
+    .block1Message{
+        grid-template-columns: 100%;
     }
 }

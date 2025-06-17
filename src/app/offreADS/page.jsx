@@ -1,13 +1,14 @@
 import MenuBar from "../components/menubar/page";
 import styles from "./offreADS.module.css";
 import Image from "next/image";
+import Animation from "../components/animation/page";
 
 function OffreADS() {
   return (
     <>
-      <MenuBar />
+      <MenuBar redirect={true}/>
       <div className={styles.container}>
-        <div className={styles.textContrainer}>
+        <Animation animation="fadeInRight" className={styles.textContrainer}>
           <h1 className={styles.title}>
             🧠 Publicité Digitale Ciblée Google Ads – Facebook & Instagram Ads
             (Meta)
@@ -119,8 +120,8 @@ function OffreADS() {
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.imageContainer}>
+        </Animation>
+        <Animation animation="fadeInLeft" className={styles.imageContainer}>
           <Image
             src="/assets/ads_illustration.png"
             alt="services illustration"
@@ -128,7 +129,7 @@ function OffreADS() {
             objectFit="contain"
             objectPosition="0% 50%"
           />
-        </div>
+        </Animation>
       </div>
     </>
   );
