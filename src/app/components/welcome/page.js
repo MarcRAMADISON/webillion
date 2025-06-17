@@ -1,19 +1,54 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import Animation from "../animation/page";
+import { useState } from "react";
+import Modal from "../Modal/page";
 
 export default function Welcome() {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
-    <div className={styles.container}>
+    <>
+      <Modal show={openModal} onClose={() => setOpenModal(false)}>
+        <video
+          src="/assets/presentation_webillion.mp4"
+          controls
+          autoPlay
+          muted
+          loop
+          style={{ width: "100%", borderRadius: "10px" }}
+        />
+      </Modal>
+      <div className={styles.container}>
         <Animation className={styles.block1} animation="fadeInRight">
-          <h1 className={styles.title}>L’innovation digitale au service de votre succès.</h1>
-          <h2 className={styles.subTitle}>Dominez le web avec des campagnes ciblées, un site web optimisé et une stratégie digitale pensée pour votre succès.</h2>
+          <h1 className={styles.title}>
+            L’innovation digitale au service de votre succès.
+          </h1>
+          <h2 className={styles.subTitle}>
+            Dominez le web avec des campagnes ciblées, un site web optimisé et
+            une stratégie digitale pensée pour votre succès.
+          </h2>
           <div className={styles.sloganContainer}>
             <div className={styles.contactButton}>Nous contacter</div>
-            <Image src='/assets/play_button.png' alt='play button' width={60} height={60} className={styles.play}/>
-            <h3 className={styles.slogan}> Innovation , engagement ,  Performance</h3>
+            <Image
+              src="/assets/play_button.png"
+              alt="play button"
+              width={60}
+              height={60}
+              className={styles.play}
+              onClick={() => setOpenModal(true)}
+            />
+            <h3 className={styles.slogan}>
+              {" "}
+              Innovation , engagement , Performance
+            </h3>
           </div>
-          <h2 className={styles.subTitle} style={{marginTop:'10px'}}>Votre partenaire de confiance pour une visibilité digitale efficace et percutante</h2>
+          <h2 className={styles.subTitle} style={{ marginTop: "10px" }}>
+            Votre partenaire de confiance pour une visibilité digitale efficace
+            et percutante
+          </h2>
         </Animation>
         <Animation className={styles.imageContainer} animation="fadeInUp">
           <Image
@@ -24,7 +59,7 @@ export default function Welcome() {
             objectPosition="100% 100%"
           />
         </Animation>
-      
-    </div>
+      </div>
+    </>
   );
 }
