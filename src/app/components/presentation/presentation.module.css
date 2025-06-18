@@ -26,8 +26,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:100%;
-    padding: 70px;
+    width:89%;
+    padding: 70px 70px 70px 0px;
 }
 
 .subTitle{
@@ -61,7 +61,7 @@
     margin-top: 10px;
 }
 
-@media (max-width:1380px){
+@media (max-width:1441px){
     .title {
       font-size: 2.2rem;
     }
