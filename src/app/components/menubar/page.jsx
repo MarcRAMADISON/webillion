@@ -33,25 +33,29 @@ function MenuBar({redirect}) {
 
   const handleSend=(e)=>{
     e.preventDefault();
-    emailjs
-    .send("service_5z97bw4", "template_gmgrr4k",{email:email}, "8fg6gI1O_wlTsVC1i")
-    .then(
-      (result) => {
-        Swal.fire({
-          title: "Adresse email envoyé!",
-          text: "Votre adresse email a été envoyé, on reviendra vers vous le plus tôt possible pour la création de votre identité visuelle",
-          icon: "success"
-        });
-        setEmail("");
-      },
-      (error) => {
-        Swal.fire({
-          title: "Adresse email non envoyé!",
-          text: "Une erreur est survenu lors de l'envoie de votre adresse email",
-          icon: "error"
-        });
-      }
-    );
+
+    if(email){
+      emailjs
+      .send("service_5z97bw4", "template_gmgrr4k",{email:email}, "8fg6gI1O_wlTsVC1i")
+      .then(
+        (result) => {
+          Swal.fire({
+            title: "Adresse email envoyé!",
+            text: "Votre adresse email a été envoyé, on reviendra vers vous le plus tôt possible pour la création de votre identité visuelle",
+            icon: "success"
+          });
+          setEmail("");
+        },
+        (error) => {
+          Swal.fire({
+            title: "Adresse email non envoyé!",
+            text: "Une erreur est survenu lors de l'envoie de votre adresse email",
+            icon: "error"
+          });
+        }
+      );
+    }
+    
   }
 
   return (

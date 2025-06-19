@@ -28,7 +28,6 @@ function Contact() {
   };
 
   const handleSend = () => {
-    console.log("values", values);
     emailjs
       .send("service_5z97bw4", "template_5i1z7ln", values, "8fg6gI1O_wlTsVC1i")
       .then(
