@@ -1,8 +1,78 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./contact.module.css";
 import Animation from "../animation/page";
+import { useState } from "react";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 function Contact() {
+  const [values, setValues] = useState({
+    name: "",
+    prenom: "",
+    typeEntreprise: "",
+    nomEntreprise: "",
+    email: "",
+    telephone: "",
+    pays: "",
+    ville: "",
+    codePostal: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    e.preventDefault();
+
+    setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSend = () => {
+    console.log("values", values);
+    emailjs
+      .send("service_5z97bw4", "template_5i1z7ln", values, "8fg6gI1O_wlTsVC1i")
+      .then(
+        (result) => {
+          Swal.fire({
+            title: "Devis envoyé!",
+            text: "Votre devis a été envoyé, on reviendra vers vous le plus tôt possible",
+            icon: "success",
+          });
+          setValues({
+            name: "",
+            prenom: "",
+            typeEntreprise: "",
+            nomEntreprise: "",
+            email: "",
+            telephone: "",
+            pays: "",
+            ville: "",
+            codePostal: "",
+            message: "",
+          });
+        },
+        (error) => {
+          Swal.fire({
+            title: "Devis non envoyé!",
+            text: "Une erreur est survenu lors de l'envoie de votre devis",
+            icon: "error",
+          });
+        }
+      );
+  };
+
+  const checkValidation =
+    values.name &&
+    values.prenom &&
+    values.email &&
+    values.codePostal &&
+    values.message &&
+    values.nomEntreprise &&
+    values.typeEntreprise &&
+    values.ville &&
+    values.pays &&
+    values.telephone;
+
   return (
     <div className={styles.container} id="contact">
       <Animation animation="fadeInRight" className={styles.contactForm}>
@@ -11,70 +81,128 @@ function Contact() {
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <input
+                className={styles.inputField}
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Prénom :</h3>
+              <input
+                className={styles.inputField}
+                name="prenom"
+                value={values.prenom}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Type d'entreprise :</h3>
+              <input
+                className={styles.inputField}
+                name="typeEntreprise"
+                value={values.typeEntreprise}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Nom de l'entreprise :</h3>
+              <input
+                className={styles.inputField}
+                name="nomEntreprise"
+                value={values.nomEntreprise}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Téléphone :</h3>
+              <input
+                className={styles.inputField}
+                name="telephone"
+                value={values.telephone}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Adresse E-mail :</h3>
+              <input
+                className={styles.inputField}
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+              />
             </div>
           </div>
         </div>
         <div className={styles.block2}>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Pays :</h3>
+              <input
+                className={styles.inputField}
+                name="pays"
+                value={values.pays}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Ville :</h3>
+              <input
+                className={styles.inputField}
+                name="ville"
+                value={values.ville}
+                onChange={handleChange}
+              />
             </div>
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <input className={styles.inputField} />
+              <h3 className={styles.label}>Code postal :</h3>
+              <input
+                className={styles.inputField}
+                name="codePostal"
+                value={values.codePostal}
+                onChange={handleChange}
+              />
             </div>
           </div>
         </div>
         <div className={styles.block1Message} style={{ marginTop: "17px" }}>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom :</h3>
-              <textarea rows={10} className={styles.inputAreaField} />
+              <h3 className={styles.label}>
+                Message : description de votre demande
+              </h3>
+              <textarea
+                rows={10}
+                className={styles.inputAreaField}
+                name="message"
+                value={values.message}
+                onChange={handleChange}
+              />
             </div>
           </div>
-          <div className={styles.bouton}>Envoyer</div>
+          {checkValidation ? (
+            <div className={styles.bouton} onClick={handleSend}>
+              Envoyer
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
-
       </Animation>
       <Animation animation="fadeInLeft" className={styles.contact}>
         <h2 className={styles.title}>Nous contacter</h2>

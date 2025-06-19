@@ -6,10 +6,13 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2";
 
 function MenuBar({redirect}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [email,setEmail]= useState("")
   const router=useRouter()
 
   const handleScroll = () => {
@@ -28,6 +31,29 @@ function MenuBar({redirect}) {
     };
   }, []);
 
+  const handleSend=(e)=>{
+    e.preventDefault();
+    emailjs
+    .send("service_5z97bw4", "template_gmgrr4k",{email:email}, "8fg6gI1O_wlTsVC1i")
+    .then(
+      (result) => {
+        Swal.fire({
+          title: "Adresse email envoyé!",
+          text: "Votre adresse email a été envoyé, on reviendra vers vous le plus tôt possible pour la création de votre identité visuelle",
+          icon: "success"
+        });
+        setEmail("");
+      },
+      (error) => {
+        Swal.fire({
+          title: "Adresse email non envoyé!",
+          text: "Une erreur est survenu lors de l'envoie de votre adresse email",
+          icon: "error"
+        });
+      }
+    );
+  }
+
   return (
     <>
       <div className={styles.newsletterContainer} style={{opacity: isScrolled ? 1 : 0, bottom:isScrolled ? '' : '-80px'}}>
@@ -41,6 +67,8 @@ function MenuBar({redirect}) {
           <input
             className={styles.inputField}
             placeholder="Votre adresse e-mail"
+            value={email}
+            onChange={(e)=>setEmail(e.target.value)}
           />
           <Image
             style={{ marginTop: "15px", marginLeft: "10px", cursor: "pointer" }}
@@ -48,6 +76,7 @@ function MenuBar({redirect}) {
             alt="envoyer icone"
             width={35}
             height={25}
+            onClick={handleSend}
           />
         </div>
       </div>

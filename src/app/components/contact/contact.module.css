@@ -45,7 +45,9 @@
     height:30px;
     width:100%;
     border:none;
-    border-radius:5px
+    border-radius:5px;
+    color:#000;
+    padding-left: 5px;
 }
 .label{
     color:#fff;
@@ -71,6 +73,8 @@
     width:100%;
     border:none;
     border-radius:5px;
+    color:#000;
+    padding-left: 5px;
 }
 .titleContact{
     color:#781487;
@@ -88,6 +92,8 @@
     font-size: 1rem;
     border-radius: 5px;
     margin-left: 15px;
+    cursor:pointer;
+    transition: all 0.8s ease-in;
 }
 .block1Message{
     width:100%;
