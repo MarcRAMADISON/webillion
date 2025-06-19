@@ -1,9 +1,11 @@
+'use client';
+
 import { useState } from "react";
 import styles from "./carousel.module.css";
 
 const Carousel = ({ children }) => {
   const [current, setCurrent] = useState(0);
-  const length = children.length;
+  const length = children?.length;
 
   const next = () => setCurrent((prev) => (prev + 1) % length);
   const prev = () => setCurrent((prev) => (prev - 1 + length) % length);
@@ -14,7 +16,7 @@ const Carousel = ({ children }) => {
       </button>
 
       <div className={styles.slideWrapper}>
-        {children.map((child, index) => {
+        {(children || []).map((child, index) => {
           return (
             <div
               key={index}
