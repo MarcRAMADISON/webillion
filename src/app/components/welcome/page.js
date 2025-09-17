@@ -39,7 +39,7 @@ export default function Welcome({ isLandingPage=false }) {
           percutante
         </h2>
       </Animation>
-      <Animation className={styles.imageContainer} style={{height:"70vh"}} animation="fadeInUp">
+      <Animation className={styles.imageContainer} style={{height:"100vh",maxHeight:"920px"}} animation="fadeInUp">
         <Image
           src="/assets/person1.png"
           alt="person"

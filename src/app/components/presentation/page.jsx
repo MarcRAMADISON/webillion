@@ -9,24 +9,24 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 
 const descriptionsCM = [
-  "✅ Contenus qui créent l'engagement: Nous créons des posts sur mesure qui attirent, captivent et incitent votre audience à l'action. Fini les publications qui passent inaperçues.",
-  "✅ Gestion complète et simplifiée: Nous prenons en charge la planification et les interactions, pour que votre communauté reste vivante et engagée, sans effort de votre part.",
-  "✅ Stratégie sur mesure et résultats garantis: Nous élaborons un plan d'action unique, basé sur vos objectifs, pour une croissance ciblée et mesurable.",
-  "✅ Toujours un coup d'avance sur la concurrence: Nous surveillons vos rivaux pour saisir chaque opportunité et vous positionner en leader.",
-  "✅ Des résultats en toute transparence: Des rapports simples et clairs vous montrent l'impact de nos actions pour une croissance visible et mesurable",
+  "Contenus qui créent l'engagement: Nous créons des posts sur mesure qui attirent, captivent et incitent votre audience à l'action. Fini les publications qui passent inaperçues.",
+  "Gestion complète et simplifiée: Nous prenons en charge la planification et les interactions, pour que votre communauté reste vivante et engagée, sans effort de votre part.",
+  "Stratégie sur mesure et résultats garantis: Nous élaborons un plan d'action unique, basé sur vos objectifs, pour une croissance ciblée et mesurable.",
+  "Toujours un coup d'avance sur la concurrence: Nous surveillons vos rivaux pour saisir chaque opportunité et vous positionner en leader.",
+  "Des résultats en toute transparence: Des rapports simples et clairs vous montrent l'impact de nos actions pour une croissance visible et mesurable",
 ];
 
 const descriptionsDW = [
-  "✅ Design personnalisé & UX de pointe : Un site unique qui reflète votre marque et offre une expérience utilisateur parfaite, conçue pour convertir.",
-  "✅ Performance & Sécurité : Un site ultra-rapide et sécurisé qui inspire confiance, sur tous les appareils.",
-  "✅ Expertise SEO intégrée : Un site visible sur Google, qui attire un flux constant de prospects qualifiés.",
-  "✅ Solution clé en main & évolutive : Nous vous livrons un site prêt à l'emploi, conçu pour grandir avec votre entreprise.",
+  "Design personnalisé & UX de pointe : Un site unique qui reflète votre marque et offre une expérience utilisateur parfaite, conçue pour convertir.",
+  "Performance & Sécurité : Un site ultra-rapide et sécurisé qui inspire confiance, sur tous les appareils.",
+  "Expertise SEO intégrée : Un site visible sur Google, qui attire un flux constant de prospects qualifiés.",
+  "Solution clé en main & évolutive : Nous vous livrons un site prêt à l'emploi, conçu pour grandir avec votre entreprise.",
 ];
 
 function Presentation({ isLandingPage = false, type }) {
   const [showModal, setShowModal] = useState(false);
   const [values, setValues] = useState({
-    offre: type === "CM"? "Community manager" : "Développement web",
+    offre: type === "CM"? "Community management" : "Développement web",
     name: "",
     email: "",
   });
@@ -68,7 +68,7 @@ function Presentation({ isLandingPage = false, type }) {
         <h1 className={styles.modalTitle}>
           Réserver offre{" "}
           <span style={{ color: "#00214d", fontStyle: "italic" }}>
-            {type === "CM" ? "Community Manager" : "Développement web"}
+            {type === "CM" ? "Community Management" : "Développement web"}
           </span>
         </h1>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -112,18 +112,20 @@ function Presentation({ isLandingPage = false, type }) {
                   );
                 })}
               </div>
-              <h3 className={styles.label}>Offre</h3>
+              <h3 className={styles.label} style={{fontWeight:"600",fontSize:'1.1rem'}}>Offre</h3>
               <h2 className={styles.offre}>
-                {type === "CM" ? "Community Manager" : "Développement web"}
+                {type === "CM" ? "Community Management" : "Développement web"}
               </h2>
             </div>
             <div className={styles.bodyCard}>
-              {type == 'CM' ? <h3 className={styles.price}>250€ / Mois</h3> : <div style={{marginTop:"30px"}}></div>}
+              {type == 'CM' ? <h3 className={styles.price}>À partir de 250€ / Mois</h3> : <div style={{marginTop:"30px"}}></div>}
               {(type === 'CM'? descriptionsCM : descriptionsDW).map((description, index) => {
                 return (
+                  <div style={{display:"flex",alignItems:"flex-start",marginTop: '10px'}}>✅
                   <h3 key={index} className={styles.description}>
                     {description}
                   </h3>
+                  </div>
                 );
               })}
               <h3 className={styles.info}>

@@ -117,16 +117,18 @@ function Offres() {
                       );
                     })}
                   </div>
-                  <h3 className={styles.label}>Offre</h3>
+                  <h3 className={styles.label} style={{fontWeight:"600",fontSize:'1.1rem'}}>Offre</h3>
                   <h2 className={styles.offre}>{offre.offre}</h2>
                 </div>
                 <div className={styles.bodyCard}>
                   <h3 className={styles.price}>{offre.price}€</h3>
                   {offre.descriptions.map((description, index) => {
                     return (
-                      <h3 key={index} className={styles.description}>
-                        {description}
-                      </h3>
+                      <div style={{display:"flex",alignItems:"flex-start",marginTop: '10px'}}>✅
+                  <h3 key={index} className={styles.description}>
+                    {description}
+                  </h3>
+                  </div>
                     );
                   })}
                   <h3 className={styles.info}>

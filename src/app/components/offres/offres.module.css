@@ -51,7 +51,7 @@
     place-self:center;
     position: relative;
     z-index: 1;
-    height:140px;
+    height:160px;
     
 }
 .bodyCard{
@@ -86,7 +86,7 @@
 .description{
     font-size: 0.8rem;
     font-weight: 700;
-    margin-top: 10px;
+    margin-left: 5px;
 }
 
 .price{
