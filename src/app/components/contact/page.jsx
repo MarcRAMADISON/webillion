@@ -11,13 +11,8 @@ function Contact() {
   const [values, setValues] = useState({
     name: "",
     prenom: "",
-    typeEntreprise: "",
-    nomEntreprise: "",
     email: "",
     telephone: "",
-    pays: "",
-    ville: "",
-    codePostal: "",
     message: "",
   });
 
@@ -40,13 +35,8 @@ function Contact() {
           setValues({
             name: "",
             prenom: "",
-            typeEntreprise: "",
-            nomEntreprise: "",
             email: "",
             telephone: "",
-            pays: "",
-            ville: "",
-            codePostal: "",
             message: "",
           });
         },
@@ -64,12 +54,7 @@ function Contact() {
     values.name &&
     values.prenom &&
     values.email &&
-    values.codePostal &&
     values.message &&
-    values.nomEntreprise &&
-    values.typeEntreprise &&
-    values.ville &&
-    values.pays &&
     values.telephone;
 
   return (
@@ -101,28 +86,6 @@ function Contact() {
           </div>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Type d'entreprise :</h3>
-              <input
-                className={styles.inputField}
-                name="typeEntreprise"
-                value={values.typeEntreprise}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className={styles.inputLine}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Nom de l'entreprise :</h3>
-              <input
-                className={styles.inputField}
-                name="nomEntreprise"
-                value={values.nomEntreprise}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className={styles.inputLine}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
               <h3 className={styles.label}>Téléphone :</h3>
               <input
                 className={styles.inputField}
@@ -144,45 +107,10 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className={styles.block2}>
-          <div className={styles.inputLine}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Pays :</h3>
-              <input
-                className={styles.inputField}
-                name="pays"
-                value={values.pays}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className={styles.inputLine}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Ville :</h3>
-              <input
-                className={styles.inputField}
-                name="ville"
-                value={values.ville}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className={styles.inputLine}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>Code postal :</h3>
-              <input
-                className={styles.inputField}
-                name="codePostal"
-                value={values.codePostal}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </div>
         <div className={styles.block1Message} style={{ marginTop: "17px" }}>
           <div className={styles.inputLine}>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <h3 className={styles.label}>
+              <h3 className={styles.label} style={{marginBottom:"10px"}}>
                 Message : description de votre demande
               </h3>
               <textarea
