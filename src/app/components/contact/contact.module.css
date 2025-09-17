@@ -69,7 +69,7 @@
 }
 .inputAreaField{
     background-color: #fff;
-    height:100px;
+    height:170px;
     width:100%;
     border:none;
     border-radius:5px;
@@ -98,7 +98,7 @@
 .block1Message{
     width:100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 100%;
     gap:17px
 }
 

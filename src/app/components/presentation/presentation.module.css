@@ -147,6 +147,39 @@
     font-weight: 600;
     background-color: #ebe2d6;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.modalTitle{
+    font-size: 1.5rem;
+}
+
+.inputField{
+    background-color: #8a8989;
+    height:30px;
+    width:100%;
+    border:none;
+    border-radius:5px;
+    color:#fff;
+    padding-left: 5px;
+    max-width: 50%;
+}
+.label{
+    color:#000;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.validButton{
+    padding: 5px 10px;
+    color:#fff;
+    font-weight: 500;
+    background-color: #00214d;
+    border-radius: 5px;
+    cursor:pointer;
+    width:130px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 @media (max-width:1441px) {
