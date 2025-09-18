@@ -3,12 +3,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Animation from "../animation/page";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Modal from "../Modal/page";
 import Carousel from "../carousel/page";
 
 export default function Welcome({ isLandingPage=false }) {
   const [openModal, setOpenModal] = useState(false);
+
+  useEffect(()=>{
+    scrollTo({
+      top: 800,
+      left: 100,
+      behavior: "smooth",
+    });
+  },[])
 
   return isLandingPage ? (
     <div key="1" className={styles.container} style={{minHeight: '700px',height: '70vh'}}>

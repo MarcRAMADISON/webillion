@@ -121,8 +121,8 @@ function Presentation({ isLandingPage = false, type }) {
               {type == 'CM' ? <h3 className={styles.price}>À partir de 250€ / Mois</h3> : <div style={{marginTop:"30px"}}></div>}
               {(type === 'CM'? descriptionsCM : descriptionsDW).map((description, index) => {
                 return (
-                  <div style={{display:"flex",alignItems:"flex-start",marginTop: '10px'}}>✅
-                  <h3 key={index} className={styles.description}>
+                  <div key={index} style={{display:"flex",alignItems:"flex-start",marginTop: '10px'}}>✅
+                  <h3 className={styles.description}>
                     {description}
                   </h3>
                   </div>

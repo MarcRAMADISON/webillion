@@ -26,8 +26,7 @@
   margin-left: 10vw;
   margin-bottom: 10vh;
   width: 100%;
-  height: 100%;
-
+  height: fit-content;
 }
 
 .title {
@@ -109,6 +108,7 @@
 @media (max-width:1080px){
   .container {
     height:fit-content;
+    max-height: none;
     grid-template-columns: 100%;
     padding:150px 0px 50px 0px
   }
@@ -130,6 +130,7 @@
   .block1 {
     padding: 0px 5vw;
     margin-left: 0px;
+    height:650px;
   }
   .sloganContainer{
     flex-wrap: wrap;
